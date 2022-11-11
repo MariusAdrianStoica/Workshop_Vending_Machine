@@ -26,13 +26,14 @@ public class App {
                System.out.println("--------------------");
            }
 
-           System.out.println("Your balance is: "+vendingMachine.getBalance());
-           vendingMachine.addCurrency(25);
-        System.out.println("Your balance is: "+vendingMachine.getBalance());
+           System.out.println("First balance is: "+vendingMachine.getBalance()+"\n");
+           vendingMachine.addCurrency(500);
+            System.out.println("Your balance after adding currency is: "+vendingMachine.getBalance()+"\n");
 
         IProduct candy =  vendingMachine.request(4);
-        System.out.println("Product price is: "+ candy.getPrice());
+
         System.out.println(candy.use());
-        System.out.println(vendingMachine.getBalance());
+        System.out.println("Product price is: "+ candy.getPrice());
+        System.out.println("Money left: " +vendingMachine.getBalance());
            }
     }
